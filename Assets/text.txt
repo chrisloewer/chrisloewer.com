@@ -1,0 +1,62 @@
+<span class="portion">
+				&lt<span class="pinkTag">html</span>&gt
+			</span>
+			<span class="portion"><br></span>
+
+				<span class="portion">
+					&lt<span class="pinkTag">head</span>&gt
+				</span>
+				<span class="portion"><br></span>
+
+						<span class="portion">
+							&lt<span class="pinkTag">title</span>&gt
+						</span>
+						<span class="portion">
+							Chris Loewer 
+						</span>
+						<span class="portion">
+							&lt/<span class="pinkTag">title</span>&gt
+						</span>
+						<span class="portion"><br></span>
+						
+						<span class="portion">
+							&lt<span class="pinkTag">link</span> <span class="greenTag">rel=</span><span class="yellowTag">"stylesheet"</span>
+						</span>
+						<span class="portion">
+							 <span class="greenTag">type=</span><span class="yellowTag">"text/css"</span> <span class="greenTag">href=</span><span class="yellowTag">"style.css"</span>&gt
+						</span>
+						<span class="portion"><br></span>
+
+				<span class="portion">	
+					&lt<span class="pinkTag">/head</span>&gt
+				</span>
+				<span class="portion"><br></span>
+				<span class="portion"><br></span>
+
+				<span class="portion">
+					&lt<span class="pinkTag">body</span>&gt
+				</span>
+				<span class="portion"><br></span>
+
+				
+				<span class="portion">Greetings! I am Christopher Loewer </span>
+				<span class="portion">and you have stumbled upon my website.</span>
+				<span class="portion"><br></span>
+				<span class="portion"><br></span>
+				<span class="portion">I am an aspiring web developer </span>
+				<span class="portion">always looking for other exciting projects. </span>
+				<span class="portion">Please check out my </span>
+				<span class="portion">&lt<span class="pinkTag">b</span>&gt</span> 
+				<span class="portion"><a href="#">portfolio</a> </span>
+				<span class="portion">&lt/<span class="pinkTag">b</span>&gt</span>
+				<span class="portion">and </span>
+				<span class="portion">&lt<span class="pinkTag">b</span>&gt</span> 
+				<span class="portion"><a href="#">resume</a>. </span>
+				<span class="portion">&lt/<span class="pinkTag">b</span>&gt</span>
+				<span class="portion"><br></span>
+
+				<span class="portion">&lt/<span class="pinkTag">body</span>&gt<br></span>
+			<span class="portion">&lt/<span class="pinkTag">html</span>&gt</span>
+			<span class="portion"><br></span>
+
+			<div class="cursor" id="myCursor"></div>
