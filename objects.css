@@ -1,0 +1,76 @@
+
+/* CLOUDS */
+.cloud-one {
+	position: absolute;
+	top: -30%;
+	left: -12%;
+	transform: translateZ(-1px) scale(2);
+}
+.cloud-two {
+	position: absolute;
+	top: 10%;
+	right: -60%;
+	transform: translateZ(-3.5px) scale(4.5);
+}
+.cloud-three {
+	position: absolute;
+	top: -45%;
+	right: 0%;
+	transform: translateZ(-1px) scale(2);
+}
+.cloud-four {
+	position: absolute;
+	top: -20%;
+	left: 4%;
+	transform: translateZ(-2.5px) scale(3.5);
+}
+.cloud-five {
+	position: absolute;
+	top: -80%;
+	right: 30%;
+	transform: translateZ(-3px) scale(4);
+}
+
+/* BUILDINGS */
+.building-one {
+	position: absolute;
+	bottom: -20%;
+	left: -30%;
+	transform: translateZ(-1px) scale(2);
+}
+.building-two {
+	position: absolute;
+	bottom: -10%;
+	left: -35%;
+	transform: translateZ(-2px) scale(3);
+}
+.building-three {
+	position: absolute;
+	bottom: -10%;
+	left: 50%;
+	transform: translateZ(-3px) scale(4);
+}
+.building-four {
+	position: absolute;
+	bottom: -80%;
+	left: 30%;
+	transform: translateZ(-2px) scale(3);
+}
+.building-five {
+	position: absolute;
+	bottom: -15%;
+	right: 10%;
+	transform: translateZ(-1px) scale(2);
+}
+.building-six {
+	position: absolute;
+	bottom: -100%;
+	right: 0%;
+	transform: translateZ(-2.5px) scale(3.5);
+}
+.building-seven {
+	position: absolute;
+	bottom: -20%;
+	right: -40%;
+	transform: translateZ(-1.5px) scale(2.5);
+}

@@ -1,6 +1,6 @@
 var mainDiv = document.getElementById('main');
 
-window.location.hash = 'main';
+window.location.hash = 'main-tag';
 
 // page tail
 window.onload = function() {
