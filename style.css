@@ -1,9 +1,16 @@
 * {
 	margin: 0;
 	padding: 0;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	font-family: 'Work Sans', sans-serif;
 }
 
-.body {
+.body-container {
 	height: 100vh;
 }
 
@@ -24,6 +31,47 @@
 	height: 100%;
 	background-image: linear-gradient(to right, #3B3E63, rgba(255,255,255, 0));
 }
+.sidebar-left:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.content {
+	max-width: 60vw;
+	display: inline-block;
+	vertical-align: middle;
+
+	background-color: rgba(201,211,255, .5);
+	margin-left: 40px;
+	padding: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+
+	font-size: 28px;
+}
+
+/* SPINNERS */
+.skills {
+	text-align: center;
+}
+
+svg {
+	display: inline-block;
+	margin: 20px 10px;
+	width: 180px;
+}
+
+.fill {
+	fill: rgba(201,211,255, 1);
+}
+
+.border {
+	fill: #3B3E63;
+}
+
 .sidebar-right {
 	font-size: 14px;
 	position: absolute;
@@ -33,20 +81,26 @@
 	height: 100%;
 	background-image: linear-gradient(to left, #3B3E63, rgba(255,255,255, 0));
 }
-.sidebar-right .content {
+.sidebar-right-content-spacer {
+	height: 100%;
 	position: absolute;
 	right: 0;
+}
+.sidebar-right-content-spacer:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.sidebar-right .content {
 	text-align: right;
-}
-.content {
-	max-width: 60vw;
+	margin-right: 40px;
 }
 
 
-.section-2 {
-	/*background-image: linear-gradient(to top, rgba(59,62,99, 0.9), rgba(201,211,255, .5));*/
-	background-image: radial-gradient(rgba(201,211,255, .5), rgba(59,62,99, 1));
-	/*background-image: radial-gradient(#FFFFFF 50%, #AAAAAA);*/
+.body {
+	background-image: radial-gradient(rgba(201,211,255, .5), rgba(100,105,168, 0.8));
 	font-size: 14px;
 	position: relative;
 	width: 100vw;
@@ -62,6 +116,7 @@
 	position: relative;
 	height: 100vh;
 	width: 100vw;
+	pointer-events: none;
 	transform-style: preserve-3d;
 
 	margin: 0 100vw 0 175vw;
