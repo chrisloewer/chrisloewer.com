@@ -11,11 +11,11 @@ function scrollControll() {
 	rect = leftContent.getBoundingClientRect();
 
 	if(rect.left >= 0) {
-		document.getElementById('html-skill').className += ' anim-75';
-		document.getElementById('js-skill').className += ' anim-70';
-		document.getElementById('c-skill').className += ' anim-55';
-		document.getElementById('java-skill').className += ' anim-50';
-		document.getElementById('ruby-skill').className += ' anim-35';
+		document.getElementById('html-skill').className += ' anim-1';
+		document.getElementById('js-skill').className += ' anim-2';
+		document.getElementById('c-skill').className += ' anim-3';
+		document.getElementById('java-skill').className += ' anim-4';
+		document.getElementById('ruby-skill').className += ' anim-5';
 
 		body.removeEventListener('scroll', scrollControll);
 	}

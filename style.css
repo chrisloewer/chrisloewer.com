@@ -10,6 +10,11 @@
 	font-family: 'Work Sans', sans-serif;
 }
 
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
 .body-container {
 	height: 100vh;
 }
@@ -42,35 +47,15 @@
 	max-width: 60vw;
 	display: inline-block;
 	vertical-align: middle;
-
-	/*background-color: rgba(201,211,255, .5);*/
 	background-color: rgba(248,205,218, .35);
 	margin-left: 40px;
-	padding: 20px;
+	padding: 40px;
+
 	-moz-border-radius: 20px;
 	-webkit-border-radius: 20px;
 	border-radius: 20px;
 
 	font-size: 28px;
-}
-
-/* SPINNERS */
-.skills {
-	text-align: center;
-}
-
-svg {
-	display: inline-block;
-	margin: 20px 10px;
-	width: 120px;
-}
-
-.fill {
-	fill: rgba(201,211,255, 1);
-}
-
-.border {
-	fill: #3B3E63;
 }
 
 .sidebar-right {
@@ -99,7 +84,46 @@ svg {
 	margin-right: 40px;
 }
 
+.portfolio-item {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	margin: 20px;
+	border: 3px solid black;
+	border-radius: 50%;
+	background-color: #3E487D;
+}
 
+.pwi {
+	background: url('assets/logos/PWI_text_color.png') center center;
+	background-size: cover;
+}
+.faithlife {
+	background: url('assets/logos/faithlife-color-bg.png') center center;
+	background-size: cover;
+}
+.piney-woods {
+	background: url('assets/logos/tx-woods-color.png') center center;
+	background-size: cover;
+}
+.blog {
+	background: url('assets/logos/blog.png') center center;
+	background-size: cover;
+}
+.dgcs {
+	background: url('assets/logos/dgcs.png') center center;
+	background-size: cover;
+}
+.git {
+	background: url('assets/logos/git.png') center center;
+	background-size: cover;
+}
+.skull {
+	background: url('assets/logos/skull.png') center center;
+	background-size: cover;
+}
+
+/* CENTER SECTION */
 .body {
 	background-image: radial-gradient(rgba(248,205,218, .7), rgba(62,72,125, 0.8));
 	font-size: 14px;
@@ -137,20 +161,38 @@ svg {
 }
 
 .splash-box {
-	background-color: #FFFFFF;
+	background-color: rgba(62,72,125, 0.95);
 	display: inline-block;
 	position: relative;
 	vertical-align: middle;
 	height: 300px;
 	width: 600px;
-	font-size: 45px;
+
 	border: 3px solid black;
 	-moz-border-radius: 60px;
 	-webkit-border-radius: 60px;
 	border-radius: 60px;
 }
 
+.splash-box:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.splash-content {
+	display: inline-block;
+	vertical-align: middle;
+	color: #FFFFFF;
+	font-size: 30px;
+	font-weight: 300;
+}
+
 /* SKILLS */
+.skill-section {
+	margin-bottom: 15px;
+}
 .skill {
 	text-align: left;
 	position: relative;
@@ -174,31 +216,31 @@ svg {
 	background: rgba(62,72,125, 0.8);
 	pointer-events: none;
 }
-.background-anim.anim-75 {
+.background-anim.anim-1 {
 	width: 75%;
 	opacity: 1;
 	-webkit-transition: width 1.5s ease-in;
 	transition: width 1.5s ease-in;
 }
-.background-anim.anim-70 {
+.background-anim.anim-2 {
 	width: 70%;
 	opacity: 1;
 	-webkit-transition: width 1.5s ease-in;
 	transition: width 1.5s ease-in;
 }
-.background-anim.anim-55 {
+.background-anim.anim-3 {
 	width: 55%;
 	opacity: 1;
 	-webkit-transition: width 1.5s ease-in;
 	transition: width 1.5s ease-in;
 }
-.background-anim.anim-50 {
+.background-anim.anim-4 {
 	width: 50%;
 	opacity: 1;
 	-webkit-transition: width 1.5s ease-in;
 	transition: width 1.5s ease-in;
 }
-.background-anim.anim-35 {
+.background-anim.anim-5 {
 	width: 35%;
 	opacity: 1;
 	-webkit-transition: width 1.5s ease-in;
@@ -212,5 +254,24 @@ svg {
 	.splash-box {
 		height: 200px;
 		width: 400px;
+	}
+	.splash-content {
+		font-size: 18px;
+	}
+
+	.content {
+		font-size: 14px;
+	}
+	.skill-name {
+		line-height: 24px;
+	}
+	.background-anim {
+		height: 24px;
+	}
+
+	.portfolio-item {
+		height: 100px;
+		width: 100px;
+		border: none;
 	}
 }
