@@ -1,0 +1,95 @@
+body, html {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+.body {
+	height: 100vh;
+	width: 100vw;
+	background-color: #5D8DA8;
+	font-size: 0;
+}
+
+.nav-container {
+	width: 200px;
+	position: absolute;
+	left: 40%;
+	margin-left: -120px; /* half of width and padding */
+	margin-top: 20px;
+	padding: 20px;
+	border-radius: 20px;
+	background-color: rgba(255,255,255,0.2);
+	text-align: center;
+}
+
+.button {
+	display: inline-block;
+	background-color: rgba(62,72,125, 0.8);
+	padding: 10px;
+	margin: 0 10px;
+	font-size: 12px;
+	color: white;
+	cursor: pointer;
+}
+
+
+.left {
+	display: block;
+	float: left;
+	width: 0;
+	height: 100%;
+}
+.left.anim {
+	width: 40%;
+	-webkit-transition: 1s ease-in;
+	transition: 1s ease-in;
+}
+
+.right {
+	display: block;
+	float: right;
+	width: 0;
+	height: 100%;
+}
+.right.anim {
+	width: 60%;
+	-webkit-transition: 1s ease-in;
+	transition: 1s ease-in;
+}
+
+.anim-out {
+	background-color: #1B2930;
+	-webkit-transition: 1s ease-in;
+	transition: 1s ease-in;
+}
+
+#left-1 {
+	background-color: #334D5C;
+}
+#right-1 {
+	background-color: #3A5869;
+}
+#left-1.anim-out, #right-1.anim-out {
+	background-color: #1B2930;
+	-webkit-transition: 1s ease-in;
+	transition: 1s ease-in;
+}
+.page-1{
+	background-color: #1B2930;
+}
+
+#left-2 {
+	background-color: #2A5742;
+}
+#right-2 {
+	background-color: #397559;
+}
+#left-2.anim-out, #right-2.anim-out {
+	background-color: #102119;
+	-webkit-transition: 1s ease-in;
+	transition: 1s ease-in;
+}
+.page-2 {
+	background-color: #102119;
+}
