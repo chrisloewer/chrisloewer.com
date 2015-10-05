@@ -57,11 +57,9 @@ body, html {
 	-webkit-transition: 1s ease-in;
 	transition: 1s ease-in;
 }
-
-.anim-out {
-	background-color: #1B2930;
-	-webkit-transition: 1s ease-in;
-	transition: 1s ease-in;
+.anim.anim-out {
+	-webkit-transition: .5s ease-in;
+	transition: .5s ease-in;
 }
 
 #left-1 {
@@ -70,14 +68,10 @@ body, html {
 #right-1 {
 	background-color: #3A5869;
 }
-#left-1.anim-out, #right-1.anim-out {
-	background-color: #1B2930;
-	-webkit-transition: 1s ease-in;
-	transition: 1s ease-in;
-}
-.page-1{
+#left-1.anim-out, #right-1.anim-out, .page-1 {
 	background-color: #1B2930;
 }
+
 
 #left-2 {
 	background-color: #2A5742;
@@ -85,11 +79,6 @@ body, html {
 #right-2 {
 	background-color: #397559;
 }
-#left-2.anim-out, #right-2.anim-out {
-	background-color: #102119;
-	-webkit-transition: 1s ease-in;
-	transition: 1s ease-in;
-}
-.page-2 {
+#left-2.anim-out, #right-2.anim-out, .page-2 {
 	background-color: #102119;
 }
