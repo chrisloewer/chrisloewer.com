@@ -1,12 +1,13 @@
 var body;
 var destPageNumber;
 var activePageNumber;
+var buttons;
 var NUM_PAGES = 4;
 
 window.onload = function() {
 	body = document.getElementById('body');
-
 	body.addEventListener('wheel', mouseWheelController);
+	buttons = document.getElementsByClassName('pgButton');
 
 	destPageNumber = 1;
 	loadPage();
@@ -29,6 +30,14 @@ function reset() {
 	loadPage();
 }
 
+function updatePageButtons() {
+	var i;
+	for(i=0; i<buttons.length; i++) {
+		buttons[i].className = 'pgButton';
+	}
+	buttons[activePageNumber-1].className += ' active';
+}
+
 function fadeOut() {
 	var activeElement = document.getElementById('left-' + activePageNumber);
 	var partnerElement = document.getElementById('right-' + activePageNumber);
@@ -48,11 +57,21 @@ function pg_click(n) {
 	}
 }
 
+function mouseWheelController(e) {
+	if(e.deltaY > 0) {
+		nextPage();
+	}
+	else if(e.deltaY < 0) {
+		prevPage();
+	}
+}
+
 // LOAD PAGE
 function loadPage() {
 	document.getElementById('left-' + destPageNumber).className += ' anim';
 	document.getElementById('right-' + destPageNumber).className += ' anim';
 	activePageNumber = destPageNumber;
+	updatePageButtons()
 }
 
 function nextPage() {
@@ -69,11 +88,3 @@ function prevPage() {
 	}
 }
 
-function mouseWheelController(e) {
-	if(e.deltaY > 0) {
-		nextPage();
-	}
-	else if(e.deltaY < 0) {
-		prevPage();
-	}
-}
