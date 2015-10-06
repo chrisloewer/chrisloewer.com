@@ -1,36 +1,61 @@
+@font-face {
+	font-family: 'langdonregular';
+	src: url('fonts/langdon-webfont.eot');
+	src: url('fonts/langdon-webfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/langdon-webfont.woff2') format('woff2'),
+		url('fonts/langdon-webfont.woff') format('woff'),
+		url('fonts/langdon-webfont.ttf') format('truetype'),
+		url('fonts/langdon-webfont.svg#langdonregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 body, html {
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1 {
+	font-family: langdonregular;
+	font-size: 94px;
+	font-weight: normal;
+	margin: 0;
+}
+
+p {
+	font-size: 24px;
+	padding-right: 30px;
 }
 
 .body {
 	height: 100vh;
 	width: 100vw;
-	background-color: #5D8DA8;
+	background-color: #88657D;
 	font-size: 0;
 }
 
 .nav-container {
-	width: 200px;
 	position: absolute;
-	left: 40%;
-	margin-left: -120px; /* half of width and padding */
+	width: 50px;
+	left: 50%;
+	margin-left: -45px; /* half of width and padding */
 	margin-top: 20px;
 	padding: 20px;
 	border-radius: 20px;
 	background-color: rgba(255,255,255,0.2);
 	text-align: center;
 }
-
 .button {
-	display: inline-block;
-	background-color: rgba(62,72,125, 0.8);
-	padding: 10px;
-	margin: 0 10px;
-	font-size: 12px;
-	color: white;
+	display: block;
+	padding: 2px;
+	margin: 10px 10px;
+	border: 2px solid white;
 	cursor: pointer;
+}
+.button:hover {
+	background-color: #FFFFFF;
 }
 
 
@@ -41,7 +66,7 @@ body, html {
 	height: 100%;
 }
 .left.anim {
-	width: 40%;
+	width: 50%;
 	-webkit-transition: 1s ease-in;
 	transition: 1s ease-in;
 }
@@ -53,32 +78,73 @@ body, html {
 	height: 100%;
 }
 .right.anim {
-	width: 60%;
+	width: 50%;
 	-webkit-transition: 1s ease-in;
 	transition: 1s ease-in;
 }
 .anim.anim-out {
-	-webkit-transition: .5s ease-in;
-	transition: .5s ease-in;
+	-webkit-transition: .25s ease-in;
+	transition: .25s ease-in;
 }
 
 #left-1 {
-	background-color: #334D5C;
+	background-color: #88657D;
 }
 #right-1 {
-	background-color: #3A5869;
+	background-color: #EACAB3;
 }
 #left-1.anim-out, #right-1.anim-out, .page-1 {
-	background-color: #1B2930;
+	background-color: #88657C;
 }
-
 
 #left-2 {
-	background-color: #2A5742;
+	background-color: #98BD6A;
 }
 #right-2 {
-	background-color: #397559;
+	background-color: #E5F5D3;
 }
 #left-2.anim-out, #right-2.anim-out, .page-2 {
-	background-color: #102119;
+	background-color: #98BD69;
+}
+
+#left-3 {
+	background-color: #618D96;
+}
+#right-3 {
+	background-color: #B8D2D6;
+}
+#left-3.anim-out, #right-3.anim-out, .page-3 {
+	background-color: #618D95;
+}
+
+#left-4 {
+	background-color: #E68282;
+}
+#right-4 {
+	background-color: #ECD5CA;
+}
+#left-4.anim-out, #right-4.anim-out, .page-4 {
+	background-color: #E68281;
+}
+
+
+.content-container {
+	height: 100vh;
+	padding: 0 20px;
+	text-align: right;
+}
+.content-container::before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.right .content-container {
+	text-align: left;
+}
+.content {
+	margin-top: -10%;
+	display: inline-block;
+	font-size: 18px;
+	vertical-align: text-top;
 }

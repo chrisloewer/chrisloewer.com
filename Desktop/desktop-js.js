@@ -1,9 +1,12 @@
 var body;
 var destPageNumber;
 var activePageNumber;
+var NUM_PAGES = 4;
 
 window.onload = function() {
 	body = document.getElementById('body');
+
+	body.addEventListener('wheel', mouseWheelController);
 
 	destPageNumber = 1;
 	loadPage();
@@ -38,15 +41,9 @@ function fadeOut() {
 }
 
 // CLICK HANDLERS
-function pgOne_Click() {
-	if(activePageNumber != 1) {
-		destPageNumber = 1;
-		fadeOut();
-	}
-}
-function pgTwo_Click() {
-	if(activePageNumber != 2){
-		destPageNumber = 2;
+function pg_click(n) {
+	if(activePageNumber != n) {
+		destPageNumber = n;
 		fadeOut();
 	}
 }
@@ -56,4 +53,27 @@ function loadPage() {
 	document.getElementById('left-' + destPageNumber).className += ' anim';
 	document.getElementById('right-' + destPageNumber).className += ' anim';
 	activePageNumber = destPageNumber;
+}
+
+function nextPage() {
+	if(activePageNumber < NUM_PAGES && destPageNumber < NUM_PAGES) {
+		destPageNumber++;
+		fadeOut();
+	}
+}
+
+function prevPage() {
+	if(activePageNumber > 1 && destPageNumber > 1) {
+		destPageNumber--;
+		fadeOut();
+	}
+}
+
+function mouseWheelController(e) {
+	if(e.deltaY > 0) {
+		nextPage();
+	}
+	else if(e.deltaY < 0) {
+		prevPage();
+	}
 }
