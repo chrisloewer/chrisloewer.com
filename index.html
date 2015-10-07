@@ -1,125 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Chris Loewer</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="objects.css">
-	<script type="text/javascript" src="js.js"> </script>
-	<link href='https://fonts.googleapis.com/css?family=Work+Sans:600,800,500,300' rel='stylesheet' type='text/css'>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="scripts.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-<div class="body-container">
+<div class="body" id="body">
 
+  <div class="nav-container">
+    <div class="pgButton active" onclick="pg_click(1)"></div>
+    <div class="pgButton" onclick="pg_click(2)"></div>
+    <div class="pgButton" onclick="pg_click(3)"></div>
+    <div class="pgButton" onclick="pg_click(4)"></div>
+  </div>
 
-	<div class="body" id="body-id">
+  <!-- PAGE ONE -->
+  <div class="left anim loaded" id="left-1">
+    <div class="content-container">
+      <div class="content">
+        <h1>chris</h1>
+      </div>
+    </div>
+  </div>
+  <div class="right anim loaded" id="right-1">
+    <div class="content-container">
+      <div class="content">
+        <h1>loewer</h1>
+        <p>
+          Flashes of color.<br/>
+          With balance, cultures collide:<br/>
+          A beautiful web.
+        </p>
+      </div>
+    </div>
+  </div>
 
-		<!-- SIDEBARS -->
-		<div class="sidebar-left">
-			<div class="content" id="left-content">
-				<h1>ABOUT ME</h1>
-				<p>
-					Student of web development, amatuer coffee aficionado, longboarder, and hopeless film addict. Raised in Kenya. Schooled in Texas and South Korea. Budding full-stack developer currently seeking opportunities to exercise talent in web development studio.
-				</p><br/>
+  <!-- PAGE TWO -->
+  <div class="left" id="left-2">
+    <div class="content-container">
+      <div class="content">
+        <h1>about</h1>
+      </div>
+    </div>
+  </div>
+  <div class="right" id="right-2">
+    <div class="content-container">
+      <div class="content">        
+        <p>
+          Student of web development<br/>
+          Amatuer coffee aficionado<br/>
+          Longboarder<br/>
+          Film addict<br/>
+          Raised in Kenya<br/>
+          Schooled in Texas and South Korea<br/>
+          Seeking new opportunities
+        </p>
+        <h1>me</h1>
+      </div>
+    </div>
+  </div>
 
-				<h1>SKILLS</h1>
-				<div class="skill-section">
-					<div class="skill">
-						<div class="background-anim" id="html-skill"></div>
-						<span class="skill-name">HTML / CSS</span>
-					</div>
-					<br/>
-					<div class="skill">
-						<div class="background-anim" id="js-skill"></div>
-						<span class="skill-name">Javascript</span>
-					</div>
-					<br/>
-					<div class="skill">
-						<div class="background-anim" id="c-skill"></div>
-						<span class="skill-name">C</span>
-					</div>
-					<br/>
-					<div class="skill">
-						<div class="background-anim" id="java-skill"></div>
-						<span class="skill-name">Java</span>
-					</div>
-					<br/>
-					<div class="skill">
-						<div class="background-anim" id="ruby-skill"></div>
-						<span class="skill-name">Ruby</span>
-					</div>
-					<br/>
-				</div>
-				<br/>
+  <!-- PAGE THREE -->
+  <div class="left" id="left-3">
+    <div class="content-container">
+      <div class="content">
+        <h1>notable</h1>
+      </div>
+    </div>
+  </div>
+  <div class="right" id="right-3">
+    <div class="content-container">
+      <div class="content">
+        <h1>projects</h1>
+        <p>
+          <a href="http://blog.chrisloewer.com" target="_blank"><h3>Personal Blog</h3></a>
+          Stay up to date on my latest technological adventures<br/>
+          <br/>
+          <a href="http://texaspineywoodsrealty.com" target="_blank"><h3>Texas Piney Woods Realty</h3></a>
+          A fully custom real estate website designed and coded from scratch, complete with backend<br/>
+          <br/>
+          <a href="http://sebastianthepirate.com" target="_blank"><h3>Sebastian the Pirate</h3></a>
+          Sebastian stars in an interactive children's game that was resulting from a 24 hour hackathon<br/>
+          <br/>
+          <a href="http://dgchristian.org" target="_blank"><h3>Downers Grove Christian School</h3></a>
+          A wordpress powered website for a private school<br/>
+        </p>
+      </div>
+    </div>
+  </div>
 
-				<h1>CONTACT INFO</h1>
-				<a href="mailto:chris.loewer@gmail.com" target="_blank">Chris.Loewer@gmail.com</a><br/>
-				<a href="https://github.com/chrisloewer" target="_blank">Github</a><br/>
-				<a href="https://www.linkedin.com/in/chrisloewer" target="_blank">Linkedin</a><br/>
-				<a href="http://blog.chrisloewer.com" target="_blank">Blog</a><br/>
-
-				<br/>
-
-			</div>
-		</div>
-
-		<div class="sidebar-right">
-			<div class="sidebar-right-content-spacer">
-				<div class="content">
-					<h1>PARTNERS</h1>
-					<div class="portfolio">
-						<a href="https://faithlife.com/about" target="_blank" class="portfolio-item faithlife"></a>
-						<a href="http://projectworldimpact.com" target="_blank" class="portfolio-item pwi"></a>
-					</div>
-					<br/>
-
-					<h1>PORTFOLIO</h1>
-					<div class="portfolio">
-						<a href="http://blog.chrisloewer.com" target="_blank" class="portfolio-item blog"></a>
-						<a href="http://texaspineywoodsrealty.com" target="_blank" class="portfolio-item piney-woods"></a><br/>
-						<a href="http://dgchristian.org" target="_blank" class="portfolio-item dgcs"></a>
-						<a href="http://sebastianthepirate.com/" target="_blank" class="portfolio-item skull"></a>
-					</div>
-					<br/>
-				</div>
-			</div>
-		</div>
-
-		<div class="group">
-			<div id="main-tag">main tag</div>
-
-				<!-- BUILDINGS -->
-				<img src="assets/city-buildings-color/03.svg" class="building-three">			
-				<img src="assets/city-buildings-color/02.svg" class="building-two">			
-				<img src="assets/city-buildings-color/01.svg" class="building-one">			
-				<img src="assets/city-buildings-color/04.svg" class="building-four">			
-				<img src="assets/city-buildings-color/05.svg" class="building-five">			
-				<img src="assets/city-buildings-color/06.svg" class="building-six">			
-				<img src="assets/city-buildings-color/07.svg" class="building-seven">
-
-				<!-- CLOUDS -->
-				<img src="assets/city-buildings-color/cloud_01.svg" class="cloud-one">			
-				<img src="assets/city-buildings-color/cloud_02.svg" class="cloud-two">			
-				<img src="assets/city-buildings-color/cloud_03.svg" class="cloud-three">			
-				<img src="assets/city-buildings-color/cloud_04.svg" class="cloud-four">			
-				<img src="assets/city-buildings-color/cloud_05.svg" class="cloud-five">
-
-			<!-- SPLASH -->
-			<div class="splash-container">
-				<div class="splash-box">
-					<div class="splash-content">
-						<h1>CHRIS LOEWER</h1>
-						WEB DEVELOPER EXTRAORDINAIRE
-					</div>
-				</div>
-			</div>
-		</div> <!-- end group -->
-
-
-
-	</div><!-- End section 2 -->
-	
-
+  <!-- PAGE FOUR -->
+  <div class="left" id="left-4">
+    <div class="content-container">
+      <div class="content">
+        <h1>contact</h1>
+      </div>
+    </div>
+  </div>
+  <div class="right" id="right-4">
+    <div class="content-container">
+      <div class="content">
+        <p>
+          <a href="mailto:chris.loewer@gmail.com" target="_blank">chris.loewer@gmail.com</a><br/>
+          <a href="https://github.com/chrisloewer" target="_blank">Github</a><br/>
+          <a href="https://www.linkedin.com/in/chrisloewer" target="_blank">Linkedin</a><br/>
+          2100 S Mobberly Ave<br/>
+          Longview, TX 75602<br/>
+        </p>
+        <h1>info</h1>
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>
