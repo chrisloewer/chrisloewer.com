@@ -49,7 +49,7 @@ function fadeOut() {
   activeElement.addEventListener('transitionend', reset);
 }
 
-// CLICK HANDLERS
+// INTERACTION HANDLERS
 function pg_click(n) {
   if(activePageNumber != n) {
     destPageNumber = n;
@@ -71,11 +71,13 @@ function loadPage() {
   document.getElementById('left-' + destPageNumber).className += ' anim';
   document.getElementById('right-' + destPageNumber).className += ' anim';
   activePageNumber = destPageNumber;
-  updatePageButtons()
+  updatePageButtons();
+  body.addEventListener('wheel', mouseWheelController);
 }
 
 function nextPage() {
   if(activePageNumber < NUM_PAGES && destPageNumber < NUM_PAGES) {
+    body.removeEventListener('wheel', mouseWheelController);
     destPageNumber++;
     fadeOut();
   }
@@ -83,6 +85,7 @@ function nextPage() {
 
 function prevPage() {
   if(activePageNumber > 1 && destPageNumber > 1) {
+    body.removeEventListener('wheel', mouseWheelController);
     destPageNumber--;
     fadeOut();
   }
