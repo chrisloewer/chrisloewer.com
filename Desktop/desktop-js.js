@@ -52,6 +52,7 @@ function fadeOut() {
 // INTERACTION HANDLERS
 function pg_click(n) {
   if(activePageNumber != n) {
+    body.removeEventListener('wheel', mouseWheelController);
     destPageNumber = n;
     fadeOut();
   }
@@ -68,11 +69,18 @@ function mouseWheelController(e) {
 
 // LOAD PAGE
 function loadPage() {
+  document.getElementById('left-' + destPageNumber).addEventListener('transitionend', pageLoadComplete);
   document.getElementById('left-' + destPageNumber).className += ' anim';
   document.getElementById('right-' + destPageNumber).className += ' anim';
   activePageNumber = destPageNumber;
   updatePageButtons();
+}
+
+function pageLoadComplete() {
+  document.getElementById('left-' + destPageNumber).removeEventListener('transitionend', pageLoadComplete);
   body.addEventListener('wheel', mouseWheelController);
+  document.getElementById('left-' + destPageNumber).className += ' loaded';
+  document.getElementById('right-' + destPageNumber).className += ' loaded';
 }
 
 function nextPage() {
@@ -90,4 +98,5 @@ function prevPage() {
     fadeOut();
   }
 }
+
 

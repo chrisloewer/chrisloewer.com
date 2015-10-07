@@ -16,6 +16,10 @@ body, html {
   overflow: hidden;
   font-family: 'Open Sans Condensed', sans-serif;
 }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 h1 {
   font-family: langdonregular;
@@ -23,10 +27,14 @@ h1 {
   font-weight: normal;
   margin: 0;
 }
+h3 {
+  margin: 0;
+}
 
 p {
   font-size: 24px;
   padding-right: 30px;
+  margin: 40px 0;
 }
 
 .body {
@@ -54,10 +62,10 @@ p {
   border: 2px solid white;
   cursor: pointer;
 }
-.pgButton:hover {
+.pgButton.active {
   background-color: #FFFFFF;
 }
-.pgButton.active {
+.pgButton:hover {
   background-color: #FFFFFF;
 }
 
@@ -135,6 +143,7 @@ p {
   height: 100vh;
   padding: 0 20px;
   text-align: right;
+  opacity: 0;
 }
 .content-container::before {
   content: '';
@@ -145,9 +154,26 @@ p {
 .right .content-container {
   text-align: left;
 }
+.loaded .content-container {
+  opacity: 1;
+  -webkit-transition: .3s ease-in;
+  transition: .3s ease-in;
+}
+
 .content {
   margin-top: -10%;
   display: inline-block;
   font-size: 18px;
   vertical-align: text-top;
+}
+#left-2 .content, #right-2 .content {
+  vertical-align: text-bottom;
+  margin-bottom: -25%;
+}
+#left-3 .content, #right-3 .content {
+  margin-top: -25%;
+}
+#left-4 .content, #right-4 .content {
+  vertical-align: text-bottom;
+  margin-bottom: -25%;
 }
