@@ -3,11 +3,21 @@ var destPageNumber;
 var activePageNumber;
 var buttons;
 var NUM_PAGES = 4;
+touches = {
+    "touchstart": {"x":-1, "y":-1}, 
+    "touchmove" : {"x":-1, "y":-1}, 
+    "touchend"  : false,
+    "direction" : "undetermined"
+  }
 
 window.onload = function() {
   body = document.getElementById('body');
-  body.addEventListener('wheel', mouseWheelController);
   buttons = document.getElementsByClassName('pgButton');
+  body.addEventListener('wheel', mouseWheelController);
+
+  document.addEventListener('touchstart', touchHandler, false);
+  document.addEventListener('touchmove', touchHandler, false);
+  document.addEventListener('touchend', touchHandler, false);
 
   destPageNumber = 1;
   loadPage();
@@ -67,6 +77,38 @@ function mouseWheelController(e) {
   }
 }
 
+function touchHandler(e) {
+  var touch;
+  if (typeof e !== 'undefined'){  
+    // e.preventDefault(); 
+    if (typeof e.touches !== 'undefined') {
+      touch = e.touches[0];
+      switch (e.type) {
+        case 'touchstart':
+        case 'touchmove':
+          touches[e.type].x = touch.pageX;
+          touches[e.type].y = touch.pageY;
+          break;
+        case 'touchend':
+          touches[e.type] = true;
+          if (touches.touchstart.x > -1 && touches.touchmove.x > -1) {
+            touches.direction = touches.touchstart.y < touches.touchmove.y ? "down" : "up";
+            var swipeDist = Math.abs(touches.touchstart.y - touches.touchmove.y);
+            
+            if(touches.direction == 'up' && swipeDist > 200) {
+              nextPage();
+            }
+            else if(touches.direction == 'down' && swipeDist > 200) {
+              prevPage();
+            }
+          }
+        default:
+          break;
+      }
+    }
+  }
+}
+
 // LOAD PAGE
 function loadPage() {
   document.getElementById('left-' + destPageNumber).addEventListener('transitionend', pageLoadComplete);
@@ -98,5 +140,3 @@ function prevPage() {
     fadeOut();
   }
 }
-
-
