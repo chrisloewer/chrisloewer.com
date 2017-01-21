@@ -1,0 +1,49 @@
+
+<div class="source-list">
+
+  <div class="center-text">
+    <hr class="small">
+    <div class="fake-link"><- use arrow keys to navigate -></div>
+    <hr class="small">
+  </div>
+
+  <div id="_news-list">
+    <h2>News Feeds</h2>
+    {{#each news}}
+      <div class="source-name">
+        <span class="fake-link" onclick="delNewsSource({{@index}})">del - </span>
+        {{this}}
+      </div>
+    {{/each}}
+
+    <input type="text" title="Add new news source" id="_add-news-input">
+    <button onclick="addNewsSource()">Add Source</button>
+
+  </div>
+
+  <div id="_reddit-list">
+    <h2>Reddit Feeds</h2>
+    {{#each reddit}}
+      <div class="source-name">
+        <span class="fake-link" onclick="delRedditSource({{@index}})">del - </span>
+        {{this}}
+      </div>
+    {{/each}}
+
+    <input type="text" title="Add new reddit source" id="_add-reddit-input">
+    <button onclick="addRedditSource()">Add Source</button>
+  </div>
+
+  <hr class="small">
+
+  <button onclick="(function() {
+    localStorage.clear();
+    showSources();
+  })()">Reset Default Sources</button>
+
+  <hr/>
+
+
+
+
+</div>

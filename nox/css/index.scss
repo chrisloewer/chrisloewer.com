@@ -1,0 +1,315 @@
+$teal: #64FFE0;
+$teal-2: #42a68f;
+$gray-dark: #444449;
+$gray: #999999;
+$gray-light: #DDDDDD;
+
+
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  font-family: 'Cabin Condensed', sans-serif;
+}
+
+body {
+  -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+  font-size:12px;
+  height:100%;
+  margin:0;
+  padding:0;
+  width:100%;
+  background-color: $gray-light;
+  min-width: 240px;
+}
+
+.app {
+
+  .splash {
+    height: 100vh;
+    background: linear-gradient(to bottom, $teal, $teal-2);
+    text-align: center;
+
+    .splash-content {
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      width: 90%;
+
+      img {
+        max-width: 90%;
+        height: auto;
+      }
+    }
+  }
+  .splash::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .content-container {
+    height: 100vh;
+    overflow-x: hidden;
+
+    .load-screen {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      z-index: -1;
+
+      svg {
+        display: inline-block;
+      }
+      svg path, svg rect{
+        fill: $teal-2;
+      }
+    }
+    .load-screen::before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    .content {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .settings-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: url(../img/option-icon.png) center center / 25px no-repeat $teal-2;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    box-shadow: 0.5px 1px 3px 1px transparentize(black, 0.5);
+  }
+
+  .close-icon {
+    $size-close-icon: 25px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: $size-close-icon;
+    height: $size-close-icon;
+    line-height: $size-close-icon;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: $teal-2;
+    //border: 1px solid $teal-2;
+    //background-color: $gray-light;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .close-icon:hover {
+    background-color: $gray-light;
+  }
+
+  .source-container {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .source-list {
+    padding: 0 20px;
+    max-width: 100%;
+    font-size: 15px;
+    word-break: break-all;
+
+    input[type=text] {
+      width: 100%;
+      margin: 15px 0;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .page {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #FFFFFF;
+  }
+  .page.current {
+    display: block;
+  }
+}
+
+.image-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.news-container, .comic-container {
+  width: 100%;
+  margin-bottom: 80px;
+  background-color: $gray-light;
+  text-align: center;
+
+  .news-item, .comic-item {
+    display: inline-block;
+    min-height: 100px;
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px 5px;
+    word-wrap: break-word;
+    background-color: white;
+    box-shadow: 0 1px 3px 1px transparentize(black, 0.3);
+
+    p {
+      padding: 0 10px;
+      font-size: 16px;
+    }
+    div {
+      max-width: 100%;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block !important;
+    }
+    table {
+      display: inline-block;
+    }
+  }
+}
+
+  .header {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .logo {
+    width: 80px;
+    height: auto;
+  }
+
+  .fake-link {
+    color: $teal-2;
+  }
+
+  .small-text {
+    font-size: 10px;
+  }
+
+  .center-text {
+    text-align: center;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .underline {
+    text-decoration: underline;
+    color: $teal-2;
+  }
+
+  a {
+    color: $teal-2;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background-color: $teal-2;
+    margin: 50px 0;
+  }
+
+  hr.small {
+    width: 50%;
+    margin: 15px auto;
+  }
+
+  h1 {
+    font-size:32px;
+    text-align:center;
+    font-weight: 300;
+    color: #000;
+  }
+
+  h2 {
+    font-weight: 300;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin: 5px 10px;
+    color: black;
+  }
+
+  button {
+    background-color: $gray-light;
+    border: 2px solid $teal-2;
+    padding: 10px;
+  }
+  button:active {
+    background-color: $gray;
+  }
+
+
+//------------------------------------ ANIMATIONS ------------------------------------
+
+@keyframes moveFromBottom {
+  from {
+    background-color: #333333;
+    transform: translateY(100%);
+  }
+}
+@keyframes moveToBottom {
+  from {}
+  to {
+    background-color: #333333;
+    transform: translateY(100%);
+  }
+}
+
+.anim-in {
+  animation: moveFromBottom 0.3s ease-out;
+}
+
+.anim-out {
+  animation: moveToBottom 0.3s ease;
+}
+
+//------------------------------------ DESKTOP STYLES ------------------------------------
+
+@media (min-width: 800px) {
+  .news-container {
+    display: block;
+    max-width: 1200px;
+    margin: 20px auto;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+
+    .news-item {
+      max-width: 430px;
+      margin: 20px;
+    }
+  }
+
+  .comic-container {
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+
+  .header {
+    margin-top: 60px;
+  }
+}
