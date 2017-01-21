@@ -13,14 +13,15 @@ touches = {
 window.onload = function() {
   body = document.getElementById('body');
   buttons = document.getElementsByClassName('pgButton');
-  body.addEventListener('wheel', mouseWheelController);
 
-  document.addEventListener('touchstart', touchHandler, false);
-  document.addEventListener('touchmove', touchHandler, false);
-  document.addEventListener('touchend', touchHandler, false);
+  body.addEventListener('wheel', mouseWheelController);
+  document.addEventListener('touchstart', touchHandler);
+  document.addEventListener('touchmove', touchHandler);
+  document.addEventListener('touchend', touchHandler);
 
   destPageNumber = 1;
   loadPage();
+  pageLoadComplete();
 }
 
 function reset() {
@@ -63,6 +64,9 @@ function fadeOut() {
 function pg_click(n) {
   if(activePageNumber != n) {
     body.removeEventListener('wheel', mouseWheelController);
+    document.removeEventListener('touchstart', touchHandler);
+    document.removeEventListener('touchmove', touchHandler);
+    document.removeEventListener('touchend', touchHandler);
     destPageNumber = n;
     fadeOut();
   }
@@ -121,6 +125,9 @@ function loadPage() {
 function pageLoadComplete() {
   document.getElementById('left-' + destPageNumber).removeEventListener('transitionend', pageLoadComplete);
   body.addEventListener('wheel', mouseWheelController);
+  document.addEventListener('touchstart', touchHandler);
+  document.addEventListener('touchmove', touchHandler);
+  document.addEventListener('touchend', touchHandler);
   document.getElementById('left-' + destPageNumber).className += ' loaded';
   document.getElementById('right-' + destPageNumber).className += ' loaded';
 }
@@ -128,6 +135,9 @@ function pageLoadComplete() {
 function nextPage() {
   if(activePageNumber < NUM_PAGES && destPageNumber < NUM_PAGES) {
     body.removeEventListener('wheel', mouseWheelController);
+    document.removeEventListener('touchstart', touchHandler);
+    document.removeEventListener('touchmove', touchHandler);
+    document.removeEventListener('touchend', touchHandler);
     destPageNumber++;
     fadeOut();
   }
@@ -136,6 +146,9 @@ function nextPage() {
 function prevPage() {
   if(activePageNumber > 1 && destPageNumber > 1) {
     body.removeEventListener('wheel', mouseWheelController);
+    document.removeEventListener('touchstart', touchHandler);
+    document.removeEventListener('touchmove', touchHandler);
+    document.removeEventListener('touchend', touchHandler);
     destPageNumber--;
     fadeOut();
   }
